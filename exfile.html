@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8"> <!--문자 인코딩 UTF-8 설정-->
+  <title>CodePen - Frosted glass login form</title> <!--페이지 탭 표시될 제목 설정-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <!--외부 스타일시트 링크하여 기본 스타일 리셋-->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300&amp;display=swap'><link rel="stylesheet" href="./style.css">
+<!--
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300&amp;display=swap'>
+							: Google Fonts에서 "Heebo" 폰트 로드
+																												<link rel="stylesheet" href="./style.css">
+																												: 로컬 스타일시트(style.css) 페이지에 적용
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <!-- 외부 스타일시트 링크하여 기본 스타일 리셋 -->
+  <!-- East Sea Dokdo 폰트 로드 -->
+  <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+  <!-- 기존 스타일 시트 -->
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <h1>하하</h1>
-    <h2>안녕하세요</h2>
+<!-- partial:index.partial.html --><!--코드 나눠서 관리 구분-->
+<div class="scene flex"> <!--scene" 및 "flex" 2가지 클래스 가진 <div> 요소, 주로 레이아웃 구성 컨테이너-->
+	<section class="card"><!-- "card" 클래스 가진 섹션 요소, 로그인 카드 관련된 모든 요소 포함-->
+		<figure class="card__figure"><!--card__figure" 클래스 가진 <figure> 요소, 이미지 포함-->
+			<img class="card__image" src="./images/3.png" alt="온도차이"/>
+			<!--					 src : 이미지 설정 							 alt : 이미지 설명	-->
+			<figcaption> <!--이미지 설명-->
+				<span class="visually-hidden">
+					Avatar photo <!--텍스트 포함-->
+				</span>
+			</figcaption>
+		</figure>
+		<h1 class="card__heading"> <!--로그인 카드 제목 정의-->
+			<span class="visually-hidden">Account name:</span><!--화면노출X, 스크린 리더용으로 "Account name:" 텍스트 제공 -->
+			<span>
+				온도차이 <!--실제 사용자 이름을 표시-->
+			</span>
+		</h1>
+		<form class="card__form"> <!--로그인 폼 포함 <form>요소, 사용자 입력 받기 위한 양식-->
+			<label for="password" class="visually-hidden">Password:</label>
+			<!--		"Password" 레이블 화면에 숨김, 스크린 리더용 제공 요소-->
+			<input id ="id" class="card__input" type="text" placeholder="아이디를 입력하세요"/>
+			<input id="password" class="card__input" type="password" placeholder="비밀번호를 입력하세요"/>
+			<!--				: 비밀번호 입력 필드, type="password" 속성 입력한 문자 비밀번호처럼 숨김-->
+
+			<div class="button-container">
+			<button class="card__button" type="button">
+				<!--"Login" 버튼 생성, type="button" 페이지 제출X, 단순 버튼 클릭 위한 설정-->
+				<span>로그인</span> <!--버튼 표시될 텍스트-->
+			</button>
+			<!-- 회원가입 버튼 추가 -->
+			<a href="/join/join.html" id="signup-btn" class="card__button">
+				<span>회원가입</span>
+			</a>
+			</div>
+		  </form>
+		</section>
+	  	</div>
+
+		</form>
+	</section>
+</div>
+<!-- partial -->
+  
 </body>
 </html>
